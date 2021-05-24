@@ -1,0 +1,14 @@
+import os
+whichdirectory = input("which directory would you like to save your information?")
+whichfile = input("and in which file..?")
+# address = (whichdirectory + ' \ ' + whichfile)
+# print(address)
+
+path=os.path.join(whichdirectory,whichfile)
+print(path)
+os.mkdir(path)
+userinput = input("Please give me you name, address, and number with comma's in between")
+file3 = open(path,'w')
+file3.writelines(userinput)
+file3 = open(path,'r')
+print(file3.read)
